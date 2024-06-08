@@ -1,0 +1,696 @@
+.mid {
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    background-color: #1c1c1c;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.regional_headermid {
+    background-image: url("../img/background_header_welcome.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.alert {
+    background-color: #333;
+    color: #f9c74f;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+}
+
+.alert span {
+    background-color: #f9c74f;
+    color: #333;
+    border-radius: 50%;
+    padding: 5px 10px;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.alert a {
+    color: #1d72b8;
+    margin-left: 5px;
+    text-decoration: none;
+}
+
+.text-welcome {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.text-welcome h1 {
+    font-size: 2.5em;
+    margin-left: 10%;
+}
+
+.server-status {
+    display: flex;
+    font-family: "Times New Roman";
+    font-weight: bold;
+    align-items: center;
+    margin-right: 10%;
+    font-size: 1em;
+    color: white;
+    text-decoration: none;
+}
+
+.server-status .icon-online {
+    color: #21ff19;
+    margin-left: 5px;
+    font-size: 10px;
+}
+
+.server-status:hover {
+    text-decoration: underline;
+}
+
+.search-container {
+    position: relative;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-icon {
+    position: absolute;
+    left: 19%;
+    font-size: 25px;
+    color: #999;
+}
+
+.search-input {
+    width: 60%;
+    padding: 15px 15px 15px 40px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.categories {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 60px;
+    z-index: 1000;
+    padding: 10px;
+    background-color: #1c1c1c;
+}
+
+.category {
+    position: relative;
+    padding: 0;
+    width: 300px;
+    height: 70px;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: background-color 0.3s;
+}
+
+.category-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(100%);
+}
+
+.category-icon {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: white;
+}
+
+.category-text {
+    position: absolute;
+    top: 50%;
+    left: 120px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+.category:hover .category-image {
+    filter: brightness(150%);
+}
+
+/*========================= Game ==========================*/
+
+.regional_game {
+    margin-top: 5%;
+    background-color: #1c1c1c;
+}
+
+.text_regional_game {
+    color: whitesmoke;
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: -.5px;
+    line-height: 2.1875rem;
+    font-family: inherit;
+    padding-bottom: 30px;
+    margin-right: 73%;
+}
+
+.button_games_row1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+}
+
+.button_games_row2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 2%;
+    gap: 40px;
+}
+
+.button_games_row3{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 2%;
+    gap: 40px;
+}
+
+.button_games_row4 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-right: 32%;
+    margin-top: 2%;
+    gap: 40px;
+}
+
+
+.game-button {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.fortnite_games{
+    position: relative;
+    padding: 0;
+    width: 690px;
+    height: 300px;
+    background-color: #333;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: background-color 0.3s;
+}
+
+.lego_games, .rocket-racing_games,
+.festival_games, .rocketleague_games,
+.fall_guys_games, .rocket_leaguewipe,
+.alanwake_games, .horizonchase_games,
+.pcbuild_games, .pcbuild2_games,
+.alanwakeR_games, .kida_games,
+.shadow_games, .postparty_games{
+    position: relative;
+    padding: 0;
+    width: 200px;
+    height: 300px;
+    background-color: #333;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: background-color 0.3s;
+}
+
+.fortnite-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(100%);
+}
+
+
+.lego-image, .rocket_racing-image,
+.festival-image, .rocketleague-image, .fall_guys-image,
+.rocket_leaguewipe-image,
+.alanwake-image, .horizonchase-image,
+.pcbuild-image, .pcbuild2-image,
+.alanwakeR-image, .kida-image,
+.shadow-image, .postparty-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(100%);
+}
+
+.fortnite_games:hover .fortnite-image,
+.lego_games:hover .lego-image,
+.rocket-racing_games:hover .rocket_racing-image,
+.festival_games:hover .festival-image,
+.rocketleague_games:hover .rocketleague-image,
+.fall_guys_games:hover .fall_guys-image,
+.rocket_leaguewipe:hover .rocket_leaguewipe-image,
+.alanwake_games:hover .alanwake-image,
+.horizonchase_games:hover .horizonchase-image,
+.pcbuild_games:hover .pcbuild-image,
+.pcbuild2_games:hover .pcbuild2-image,
+.alanwakeR_games:hover .alanwakeR-image,
+.kida_games:hover .kida-image,
+.shadow_games:hover .shadow-image,
+.postparty_games:hover .postparty-image {
+    filter: brightness(150%);
+    transform: scale(1.1);
+}
+
+.game-text {
+    font-size: 18px;
+    color: whitesmoke;
+    font-weight: initial;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.show_games {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    background-color: #333;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.show_gamesicon {
+    font-size: 50px;
+    margin-bottom: 10px;
+    z-index: 1;
+}
+
+.icon_show{
+    position: absolute;
+    font-weight: bold;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.text_showgames {
+    font-size: 16px;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.show_games::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    background-color: #007bff;
+    clip-path: polygon(100% 0, 100% 100%, 0 100%);
+    transition: width 0.3s, height 0.3s, clip-path 0.3s;
+}
+
+.show_games:hover::before {
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.content {
+    display: block;
+    border: solid 1px;
+    padding: 20px;
+    background: #ddd;
+}
+
+/*============================== Accounts ============================*/
+
+.regional_accounts {
+    margin-top: 5%;
+    background-color: #1c1c1c;
+}
+
+.text_regional-accounts {
+    color: whitesmoke;
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: -.5px;
+    line-height: 2.1875rem;
+    font-family: inherit;
+    padding-bottom: 30px;
+    margin-right: 71%;
+}
+
+.button_accounts_row1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+}
+
+.button_accounts_row2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 3%;
+}
+
+.button_accounts_row3{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 3%;
+}
+
+.epicgamesstore_accounts,
+.Accounts_accounts,
+.ourcreator_accounts,
+.payments_accounts,
+.technical_accounts,
+.parent-guardian_accounts {
+    position: relative;
+    padding: 0;
+    width: 570px;
+    height: 200px;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: background-color 0.3s;
+}
+
+.epicgamesstore-image,
+.Accounts-image,
+.ourcreator-image,
+.payments-image,
+.technical-image,
+.parent-guardian-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.captions_epicgamesstore,
+.captions_Accounts,
+.captions_ourcreator,
+.captions_payments,
+.captions_technical,
+.captions_parent-guardian {
+    background-color: #333333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 200px;
+    padding: 20px;
+    z-index: 2;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .2px;
+    line-height: 20px;
+    word-break: break-word;
+    text-align: center;
+    clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);  /* đường chéo */
+}
+
+.captions_epicgamesstore,
+.captions_Accounts,
+.captions_ourcreator,
+.captions_payments,
+.captions_technical,
+.captions_parent-guardian {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.icon_epicgamesstore,
+.icon_Accounts,
+.icon_ourcreator,
+.icon_payments,
+.icon_technical,
+.icon_parent-guardian {
+    font-size: 70px;
+    margin-bottom: 10px;
+    z-index: 1;
+    margin-top: -60px;
+    align-self: flex-end;
+}
+
+.text_epicgamesstore,
+.text_Accounts,
+.text_ourcreator,
+.text_payments,
+.text_technical,
+.text_parent-guardian {
+    font-size: 25px;
+    font-weight: bold;
+    z-index: 1;
+    margin-top: 1px;
+    margin-left: 20%;
+}
+
+.epicgamesstore-image:hover,
+.Accounts-image:hover,
+.ourcreator-image:hover,
+.payments-image:hover,
+.technical-image:hover,
+.parent-guardian-image:hover {
+    filter: brightness(150%);
+    transform: scale(1.1);
+}
+
+/*=============================== Enterprise ==================================*/
+
+.regional_enterprise {
+    margin-top: 5%;
+    background-color: #1c1c1c;
+}
+
+.text_regional-enterprise {
+    color: whitesmoke;
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: -.5px;
+    line-height: 2.1875rem;
+    font-family: inherit;
+    padding-bottom: 30px;
+    margin-right: 71%;
+}
+
+.button_enterprise_row1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+}
+
+.button_enterprise_row2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+}
+
+.button_enterprise_row3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 80px;
+}
+
+.unrealengine_enterprise {
+    position: relative;
+    width: 1200px;
+    height: 210px;
+    padding: 0;
+    border: none;
+    background-color: #333;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.marketplace_enterprise,
+.unrealeditor_enterprise {
+    position: relative;
+    margin-top: 40px;
+    width: 570px;
+    height: 210px;
+    padding: 0;
+    border: none;
+    background-color: #333;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.twinmotion_enterprise,
+.onlineservices_enterprise,
+.kws_enterprise {
+    position: relative;
+    margin-top: 40px;
+    width: 360px;
+    height: 210px;
+    padding: 0;
+    border: none;
+    background-color: #333;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.unrealengine-image,
+.marketplace-image,
+.unrealeditor-image,
+.twinmotion-image,
+.onlineservices-image,
+.kws-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(100%);
+}
+
+.icon_u {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%);
+    font-size: 80px;
+    color: white;
+}
+
+.icon_row3 {
+    position: absolute;
+    top: 50%;
+    left: 35px;
+    transform: translateY(-50%);
+    font-size: 60px;
+    color: white;
+}
+
+.text_unrealengine {
+    position: absolute;
+    top: 50%;
+    left: 120px;
+    transform: translateY(-50%);
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+}
+
+.text_marketplace,
+.text_unrealeditor,
+.text_twinmotion,
+.text_onlineservices {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+}
+
+.text_kws {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+.icon_muiten {
+    position: absolute;
+    font-size: 30px;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+}
+
+.unrealengine_enterprise::before,
+.marketplace_enterprise::before,
+.unrealeditor_enterprise::before,
+.twinmotion_enterprise::before,
+.onlineservices_enterprise::before,
+.kws_enterprise::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    background-color: yellow;
+    clip-path: polygon(0 0, 100% 100%, 100% 100%, 100% 0); /* Thay đổi đường chéo */
+    transition: width 0.3s, height 0.3s, clip-path 0.3s;
+    z-index: 1;
+}
+
+.unrealengine-image:hover,
+.marketplace-image:hover,
+.unrealeditor-image:hover,
+.twinmotion-image:hover,
+.onlineservices-image:hover,
+.kws-image:hover {
+    /*filter: brightness(150%);*/
+    transform: scale(1.1);
+}

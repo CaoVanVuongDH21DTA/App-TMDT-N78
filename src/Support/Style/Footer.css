@@ -1,0 +1,164 @@
+.footer {
+    background-color: #181818;
+    color: #fff;
+    padding: 20px 72px;
+    text-align: center;
+
+
+
+    .footer-social-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .social-media {
+            margin-bottom: 20px;
+
+            a {
+                color: #fff;
+                margin: 0 10px;
+                text-decoration: none;
+                font-size: 24px;
+            }
+        }
+
+        .icon{
+            transition: color .5s ease-in-out;
+
+            &:hover{
+                color: blue!important;;
+            }
+        }
+
+        .back-to-top{
+            #back-to-top{
+                border: none;
+                background-color: #1c1c1c;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .footer-content {
+        display: flex;
+        gap: 50px;
+        margin: 16px 10px;
+
+        h4 {
+            margin-bottom: 10px;
+            opacity: .4;
+            text-align: left;
+        }
+        .resources{
+            .list-resources{
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+
+                ul {
+                    list-style: none;
+                    padding: 0;
+                    text-align: left;
+
+                    li {
+                        margin-bottom: 5px;
+
+                        a {
+                            color: #ccc;
+                            text-decoration: none;
+                            transition: color .3s ease-in-out;
+
+                            &:hover {
+                                color: blue;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .made-by-epic-games{
+            .list-made-epic{
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+
+                ul {
+                    list-style: none;
+                    padding: 0;
+                    text-align: left;
+
+                    li {
+                        margin-bottom: 5px;
+
+                        a {
+                            color: #ccc;
+                            text-decoration: none;
+                            transition: color .3s ease-in-out;
+
+                            &:hover {
+                                color: blue;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-bottom {
+        margin-top: 20px;
+        font-size: 12px;
+        text-align: left;
+
+        .copyright{
+            width: 50%;
+            margin: 16px 10px;
+
+            p {
+                margin: 10px 0;
+            }
+        }
+
+        .footer-legal{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            text-align: left;
+            margin-top: 10px;
+
+
+            .footer-links {
+                margin-top: 10px;
+
+                a {
+                    color: #ccc;
+                    text-decoration: none;
+                    margin: 0 10px;
+                    transition: .3s ease-in-out;
+
+                    &:hover {
+                        color: blue;
+                    }
+                }
+            }
+
+            .logos{
+                display: flex;
+                flex-direction: row;
+                list-style: none;
+                gap: 20px;
+
+
+                li a{
+                    opacity: .7;
+                    transition: .3s opacity;
+
+                    &:hover{
+                        opacity: 1.5;
+                    }
+                }
+            }
+        }
+
+    }
+}
