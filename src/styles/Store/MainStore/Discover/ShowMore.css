@@ -104,3 +104,60 @@
         }
     }
 }
+/* Smartphones */
+@media only screen and (max-width: 736px) {
+    .container{
+        width: 100%;
+        padding: 0 1rem;
+        h1{
+            font-size: 30px;
+            letter-spacing: -0.3px;
+            line-height: 1.2;
+            color: rgb(245, 245, 245);
+            padding: 10px 0px;
+            width: 210px;
+            margin: 0 0 50px;
+        }
+        .list{
+            grid-template-columns: auto auto;
+            gap: 8px;
+            margin-bottom: 40px;
+
+            .game-card{
+                margin-bottom: 10px;
+
+                .game-info{
+                    padding: 0;
+                    h3{
+                        font-size: 14px;
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Ipads */
+@media only screen and (min-width: 736px) and (max-width: 1024px) {
+    .container{
+        .list {
+            grid-template-columns: auto auto auto auto;
+            margin-bottom: 40px;
+
+            .game-card {
+                margin-bottom: 10px;
+
+                .game-info {
+                    padding: 0;
+
+                    h3 {
+                        font-size: 14px;
+
+                    }
+                }
+            }
+        }
+    }
+
+}

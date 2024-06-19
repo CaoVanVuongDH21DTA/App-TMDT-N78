@@ -1,0 +1,182 @@
+.NavHeader {
+    background: rgb(16, 16, 20);
+    height: 100dvh;
+    top: 0;
+    width: 100%;
+    left: 0;
+
+    header {
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h1 {
+            margin: 0;
+            text-transform: uppercase;
+            font-size: 24px;
+        }
+    }
+
+    main {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .tools {
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+            padding: 4px 20px;
+
+            .languages {
+
+                .img-languages {
+                    cursor: pointer;
+                }
+
+                .language {
+                    display: none;
+                    position: absolute;
+                    top: 70px;
+                    left: 0;
+                    z-index: 5;
+                    background: #101014FF;
+                    width: 100%;
+                    height: 91%;
+
+                    &.active {
+                        display: block;
+                    }
+
+                    button {
+                        padding: 4px 1rem;
+                        background: none;
+                        border: none;
+                        color: white;
+                        font-size: 16px;
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    .list-languages {
+                        list-style: none;
+                        padding: 0 20px;
+
+                        li {
+                            width: 95%;
+                            background: rgba(170, 170, 174, 0.12);
+                            margin: 20px 0;
+                            padding: 16px 12px;
+                            border-radius: 10px;
+                        }
+
+                        a {
+                            text-decoration: none;
+                            color: white;
+                        }
+                    }
+                }
+            }
+
+            .person {
+                cursor: pointer;
+            }
+        }
+
+        .main-nav {
+            height: 100%;
+
+            .main-nav-list {
+                margin: 0;
+                list-style: none;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+
+                .main-nav-list-item {
+                    background-color: #202024;
+                    color: #e6e6ea;
+                    border-radius: 0.75rem;
+                    padding: 1rem;
+                    text-align: start;
+                    align-items: center;
+
+                    .show-list-distri {
+                        width: 100%;
+                        background: none;
+                        border: none;
+                        color: #e6e6ea;
+                        display: flex;
+                        justify-content: space-between;
+                        font-size: 16px;
+                    }
+
+                    .list-distribute {
+                        position: absolute;
+                        display: none;
+                        top: 70px;
+                        left: 0;
+                        z-index: 5;
+                        background: #101014FF;
+                        width: 100%;
+                        height: 91%;
+
+                        &.active {
+                            display: block;
+                        }
+
+                        button {
+                            padding: 4px 1rem;
+                            background: none;
+                            border: none;
+                            color: white;
+                            font-size: 16px;
+                            display: flex;
+                            align-items: center;
+                        }
+
+                        .list {
+                            list-style: none;
+                            padding: 0 20px;
+
+                            li {
+                                width: 95%;
+                                background: rgba(170, 170, 174, 0.12);
+                                margin: 20px 0;
+                                padding: 16px 12px;
+                                border-radius: 10px;
+                            }
+
+                            a {
+                                text-decoration: none;
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .download {
+            display: flex;
+            inset-block-end: 0;
+            inset-inline: 0;
+            justify-content: center;
+            position: absolute;
+            padding: 0 24px 24px 24px;
+
+            .download-btn {
+                cursor: pointer;
+                width: 100%;
+                color: #18181C;
+                border-radius: 0.5rem;
+                padding: 16px;
+                text-decoration: none;
+                text-align: center;
+                background: #26bbff;
+            }
+        }
+    }
+}

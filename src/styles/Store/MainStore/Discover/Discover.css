@@ -7,7 +7,7 @@
         justify-content: center;
         align-items: center;
         gap: 20px;
-        height: 100px; /* Adjust height as needed */
+        height: 100px;
         margin: 20px 0;
 
         .loading-spinner {
@@ -23,4 +23,16 @@
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+/* Smartphones */
+@media only screen and (max-width: 736px) {
+    .discover{
+        width: 100%;
+    }
+}
+
+/* Ipads */
+@media only screen and (min-width: 736px) and (max-width: 1024px) {
+
 }
