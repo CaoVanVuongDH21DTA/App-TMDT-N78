@@ -3,6 +3,8 @@
     color: #fff;
     padding: 20px 72px;
     text-align: center;
+    z-index: 10;
+    position: relative;
 
     .footer-social-container{
         display: flex;
@@ -33,7 +35,7 @@
                 border: none;
                 background-color: #1c1c1c;
                 cursor: pointer;
-                transition: .3s smooth;
+                transition: all .3s ease;
             }
         }
     }
@@ -122,7 +124,6 @@
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            text-align: left;
             margin-top: 16px;
 
             .footer-links {
@@ -173,13 +174,51 @@
 
 /*Smartphones */
 @media only screen and (max-width: 736px) {
+    .footer{
+        padding: 16px 24px;
+
+        .footer-content{
+            flex-direction: column;
+            .resources{
+                .list-resources{
+                    font-size: 14px;
+                    display: grid;
+                    grid-template-columns: auto auto;
+                    gap: 5px;
+                    .first-column{
+                        grid-row: span 2;
+                    }
+                }
+            }
+        }
+
+        .footer-bottom{
+            .copyright{
+                width: 100%;
+            }
+            .footer-legal{
+                flex-direction: column;
+                align-items: center;
+
+                .footer-links{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+                .legal{
+                    display: flex;
+                    align-items: center;
+                    flex-direction: row;
+                    .logos{
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
 
 }
 /*iPads */
-@media only screen and (max-width: 1024px) {
-
-}
-/*Desktops and laptops*/
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 736px) and (max-width: 1024px) {
 
 }

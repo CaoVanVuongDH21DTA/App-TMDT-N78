@@ -5,7 +5,7 @@ import dataNews from '../../../../Data/dataNews.json'
 import Pagination from '../../Pagination/Pagination';
 
 const News = () => {
-    const articlesPerPage = 5; // Number of articles per page
+    const articlesPerPage = 5; // Số lượng bài viết trên mỗi trang
     const [currentPage, setCurrentPage] = useState(1);
 
     const renderArticles = () => {
@@ -18,27 +18,10 @@ const News = () => {
                     <p><FaStar/><em>{article.date}</em></p>
                     <span>{article.title}</span>
                     <a>{article.description}</a>
-                    <a href={article.link}>Read more</a>
+                    <a href={article.link} className="link">Read more</a>
                 </div>
             </div>
         ));
-    };
-
-    const renderPagination = () => {
-        const totalPages = Math.ceil(dataNews.length / articlesPerPage);
-        let pages = [];
-        for (let i = 1; i <= totalPages; i++) {
-            pages.push(
-                <button
-                    key={i}
-                    className={i === currentPage ? 'active' : ''}
-                    onClick={() => setCurrentPage(i)}
-                >
-                    {i}
-                </button>
-            );
-        }
-        return pages;
     };
 
     return (
@@ -55,7 +38,7 @@ const News = () => {
                         <h2>Empire of the Ants offers a new micro-sized perspective on the RTS genre</h2>
                         <p>Tower Five explain the genre-changing tech that maakes their photorealistic ants come alive,
                             and why they can't promise that no insects were harmed in the marking of their game</p>
-                        <div><a href="#">Read more</a></div>
+                        <div className="link"><a href="#">Read more</a></div>
                     </div>
                     <div className="game-card">
                         <img
@@ -64,7 +47,7 @@ const News = () => {
                         <h2>Empire of the Ants offers a new micro-sized perspective on the RTS genre</h2>
                         <p>Tower Five explain the genre-changing tech that maakes their photorealistic ants come alive,
                             and why they can't promise that no insects were harmed in the marking of their game</p>
-                        <div><a href="#">Read more</a></div>
+                        <div className="link"><a href="#">Read more</a></div>
                     </div>
                 </div>
             </div>

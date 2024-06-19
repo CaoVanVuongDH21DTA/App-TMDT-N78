@@ -23,13 +23,13 @@ aside{
 
                 .search-filt {
                     background: rgba(50, 50, 50, 0.5);
-                    height: 20px;
-                    padding: 10px 0px 10px 40px;
+                    height: 40px;
+                    padding: 10px 20px 10px 30px;
                     border: none;
                     outline: none;
                     color: white;
                     border-radius: 10px;
-                    width: 205px;
+                    width: 100%;
 
 
                     &:focus{
@@ -103,5 +103,10 @@ aside{
                 display: none;
             }
         }
+    }
+}
+@media only screen and (max-width: 736px) {
+    aside{
+        display: none;
     }
 }
