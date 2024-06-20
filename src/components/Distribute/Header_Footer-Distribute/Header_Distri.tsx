@@ -1,13 +1,14 @@
 import React, {useEffect, useState} from "react";
-import { FaChevronDown, FaChevronUp, FaGlobe } from "react-icons/fa";
-import { BsPersonCircle } from "react-icons/bs";
-import '../../styles/Store/Header.css';
-import {useNavigate } from "react-router-dom";
-import { SiEpicgames } from "react-icons/si";
-import {IoClose, IoMenu} from "react-icons/io5";
+import {useNavigate} from "react-router-dom";
+import {SiEpicgames} from "react-icons/si";
+import {FaChevronDown, FaChevronUp, FaGlobe} from "react-icons/fa";
 import {GrFormNext, GrFormPrevious} from "react-icons/gr";
+import {BsPersonCircle} from "react-icons/bs";
+import {IoClose, IoMenu} from "react-icons/io5";
+import '../../../styles/Distribute/Header_Distri.css'
+import StorePage from "../../Store/StorePage";
 
-const Header = () => {
+function Header_Distri (){
     const navigate = useNavigate();
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [showDistribute, setShowDistribute] = useState(false);
@@ -23,6 +24,7 @@ const Header = () => {
             document.body.style.overflow = 'auto';
         };
     }, [isMenuHeaderOpen]);
+
 
     const  toggleLanguages = ()=>{
         if (showLanguages) {
@@ -46,21 +48,12 @@ const Header = () => {
         }
     };
 
-    const home = ()=>{
-        navigate('/');
-    }
-
     const handlePersonClick = () => {
         navigate('/login');
     };
-    const Documentation = ()=>{
-        navigate('/Documentation')
-    }
-    const DeveloperForums = ()=>{
-        navigate('/DeveloperForums')
-    }
-    const Store = () =>{
-        navigate('/');
+
+    const StorePage=()=>{
+        navigate('/')
     }
 
     const HideMenuHeader =()=>{
@@ -72,7 +65,7 @@ const Header = () => {
     };
 
     return (
-        <header className={`header ${isMenuHeaderOpen ? 'menu-open' : ''}`}>
+        <header className={`header-distribute ${isMenuHeaderOpen ? 'menu-open' : ''}`}>
             <div className={`btn-logo-show-hide-menu ${isMenuHeaderOpen ? 'hide' : ''}`}>
                 <div className="list_extention">
                     <button className="btn-logo" onClick={handleButtonClick} >
@@ -124,7 +117,7 @@ const Header = () => {
                                 </div>
                                 <div className="dropdown-column">
                                     <h4>Discover</h4>
-                                    <a href="#" onClick={Store}>
+                                    <a href="#" onClick={StorePage}>
                                         <SiEpicgames size={22}/>
                                         <span>
                                             Epic Games Store
@@ -265,27 +258,42 @@ const Header = () => {
                 </svg>
             </div>
             <div className={`navbar_header ${isMenuHeaderOpen ? 'menu-open' : ''}`}>
-                <h1 style={{fontSize: "20px"}} onClick={home}>STORE</h1>
+                <h1 style={{fontSize: "20px"}}>ONLINE SERVICES</h1>
                 <div className={`mobile-drawer ${isMenuHeaderOpen ? 'active' : ''}`}>
                     <div className="main-nav">
                         <nav className="nav-links">
                             <div className="navbar-item">
-                                <a href="#">Support</a>
+                                <a href="#">Overview</a>
+                            </div>
+                            <div className="navbar-item">
+                                <a href="#">Account Services</a>
+                            </div>
+                            <div className="navbar-item">
+                                <a href="#">Game Services</a>
+                            </div>
+                            <div className="navbar-item">
+                                <a href="#">Get Started</a>
+                            </div>
+                            <div className="navbar-item">
+                                <a href="#">News</a>
                             </div>
                             <div className="navbar-item distribute" onMouseOver={HideMenuHeader}>
                                 <button className="showListDistri" onClick={toggleDistribute}>
-                                    <span>Distribute</span>
+                                    <span>Resources</span>
                                     <div><GrFormNext size={20} className="icon-showdistr"/></div>
                                 </button>
                                 <div className={`dropdown-content ${showDistribute ? 'active' : ''}`}>
                                     <div className="backgroungd_none"></div>
                                     <div className="list-distribute">
-                                        <button className="btn-back" onClick={toggleDistribute}><GrFormPrevious size={20}/> Back</button>
+                                        <button className="btn-back" onClick={toggleDistribute}><GrFormPrevious
+                                            size={20}/> Back
+                                        </button>
                                         <ul className="list">
-                                            <li><a href="#">Distribute on Epic Games Store</a></li>
-                                            <li><a href="#" onClick={DeveloperForums}>Developer Forums</a></li>
-                                            <li><a href="#" onClick={Documentation}>Documentation</a></li>
-                                            <li><a href="#">Learning</a></li>
+                                            <li><a href="#">Documentation</a></li>
+                                            <li><a href="#" >Support</a></li>
+                                            <li><a href="#" >Trust Statement</a></li>
+                                            <li><a href="#" >Licensing</a></li>
+                                            <li><a href="#">FAQ</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -330,6 +338,6 @@ const Header = () => {
             </div>
         </header>
     )
-}
+};
 
-export default Header;
+export default Header_Distri;
