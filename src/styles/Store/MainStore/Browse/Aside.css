@@ -1,0 +1,112 @@
+aside{
+    width: 245px;
+    flex-shrink: 0;
+
+    .top-contai{
+
+        .filters{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 20px;
+
+            .input-filt{
+                position: relative;
+
+
+                .icon-search{
+                    position: absolute;
+                    top: 50%;
+                    left: 10px;
+                    transform: translate(0, -50%);
+                }
+
+                .search-filt {
+                    background: rgba(50, 50, 50, 0.5);
+                    height: 40px;
+                    padding: 10px 20px 10px 30px;
+                    border: none;
+                    outline: none;
+                    color: white;
+                    border-radius: 10px;
+                    width: 100%;
+
+
+                    &:focus{
+                        background: rgba(50, 50, 50, 0.7);
+                    }
+                }
+            }
+        }
+    }
+
+    span{
+        .btn{
+            display: flex;
+            flex-direction: column;
+
+            button{
+                display: flex;
+                justify-content: space-between;
+                background: none;
+                align-items: center;
+                border: none;
+                border-radius: 3px;
+                color: rgb(245, 245, 245);
+                opacity: 0.6;
+                padding: 30px 14px;
+                width: 100%;
+                position: relative;
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    left: 14px;
+                    right: 14px;
+                    bottom: 0;
+                    height: 1px;
+                    background-color: #AAAAAE;
+                }
+
+                &:hover{
+                    opacity: 1;
+                }
+                &:active{
+                    border: 1px solid white;
+                }
+            }
+        }
+        .list{
+            .name{
+                align-items: center;
+                border: 1px solid transparent;
+                border-radius: 3px;
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 5px;
+                color: rgba(245, 245, 245, 0.6);
+                padding: 12px;
+                pointer-events: all;
+                &:hover{
+                    background: rgba(50, 50, 50, 0.5);
+                        color: rgba(245, 245, 245);
+                    p{
+                    }
+                }
+            }
+
+            &.show {
+                display: block;
+            }
+
+            &.hide {
+                display: none;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 736px) {
+    aside{
+        display: none;
+    }
+}

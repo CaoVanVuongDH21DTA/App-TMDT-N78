@@ -1,26 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import StorePage from './components/Store/StorePage';
+import Login from './components/Login/Login';
+import Discover from "./components/Store/MainStore/Discover/Discover";
+import Browse from "./components/Store/MainStore/Browse/Browse";
+import News from "./components/Store/MainStore/News/News";
+import TopSeller from "./components/Store/MainStore/Discover/TopSeller";
+import MostPlayed from "./components/Store/MainStore/Discover/MostPlayed";
+import TopUpcommingWishlisted from "./components/Store/MainStore/Discover/TopUpconmingWishlisted";
+import DistributeOnEpicGameStore from "./components/Distribute/DistributeOnEpicGameStore";
+import DeveloperForums from "./components/Distribute/DeveloperForums";
+import Documentation from "./components/Distribute/Documentation";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Router>
+            <Routes>
+                <Route path="/" element={<StorePage />}>
+                    <Route index element={<Discover />} />
+                    <Route path="/Browse" element={<Browse />} />
+                    <Route path="/News" element={<News />} />
+                    <Route path="/TopSeller" element={<TopSeller />} />
+                    <Route path="/MostPlayed" element={<MostPlayed/>} />
+                    <Route path="/TopUpcommingWishlisted" element={<TopUpcommingWishlisted/>} />
+                    <Route path="/Distribution" element={<DistributeOnEpicGameStore/>}/>
+                </Route>
+                <Route path="/login" element={<Login />} />
+                <Route path="/DeveloperForums" element={<DeveloperForums />} />
+                <Route path="/Documentation" element={<Documentation />} />
+            </Routes>
+        </Router>
+    );
 }
 
 export default App;
