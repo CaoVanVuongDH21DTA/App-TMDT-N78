@@ -62,6 +62,9 @@ const Header = () => {
     const Store = () =>{
         navigate('/');
     }
+    const SupportPage = () =>{
+        navigate('/Support');
+    }
 
     const HideMenuHeader =()=>{
         setIsDropdownOpen(false);
@@ -270,7 +273,7 @@ const Header = () => {
                     <div className="main-nav">
                         <nav className="nav-links">
                             <div className="navbar-item">
-                                <a href="#">Support</a>
+                                <a href="#" onClick={SupportPage}>Support</a>
                             </div>
                             <div className="navbar-item distribute" onMouseOver={HideMenuHeader}>
                                 <button className="showListDistri" onClick={toggleDistribute}>
