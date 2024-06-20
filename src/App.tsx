@@ -8,6 +8,8 @@ import News from "./components/Store/MainStore/News/News";
 import TopSeller from "./components/Store/MainStore/Discover/TopSeller";
 import MostPlayed from "./components/Store/MainStore/Discover/MostPlayed";
 import TopUpcommingWishlisted from "./components/Store/MainStore/Discover/TopUpconmingWishlisted";
+import DeveloperForums from "./components/Distribute/DeveloperForums";
+import Documentation from "./components/Distribute/Documentation";
 
 function App() {
     return (
@@ -22,6 +24,8 @@ function App() {
                     <Route path="/TopUpcommingWishlisted" element={<TopUpcommingWishlisted/>} />
                 </Route>
                 <Route path="/login" element={<Login />} />
+                <Route path="/DeveloperForums" element={<DeveloperForums />} />
+                <Route path="/Documentation" element={<Documentation />} />
             </Routes>
         </Router>
     );

@@ -10,6 +10,7 @@ import News from "./News/News";
 import TopSeller from "./Discover/TopSeller";
 import MostPlayed from "./Discover/MostPlayed";
 import TopUpcommingWishlisted from "./Discover/TopUpconmingWishlisted";
+import DistributeOnEpicGameStore from "../../Distribute/DistributeOnEpicGameStore";
 
 const Main = () => {
     const { pathname } = useLocation();
@@ -95,6 +96,7 @@ const Main = () => {
                 <Route path="/TopSeller" element={<TopSeller/>}/>
                 <Route path="/MostPlayed" element={<MostPlayed/>}/>
                 <Route path="/TopUpcommingWishlisted" element={<TopUpcommingWishlisted/>}/>
+                <Route path="/Distribution" element={<DistributeOnEpicGameStore/>}/>
             </Routes>
         </main>
     );
