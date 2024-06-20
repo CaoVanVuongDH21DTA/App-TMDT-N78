@@ -1,0 +1,69 @@
+.about-main {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.title_about {
+    margin-left: 10%;
+    font-size: 30px;
+    font-weight: bold;
+    top: 0;
+}
+
+.content_page {
+    max-width: 2000px;
+    margin-top: 80px;
+    margin-left: 10%;
+}
+
+.content_page h1 {
+    font-size: 15px;
+    font-weight: initial;
+}
+
+.content_page h2 {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.content_page h3{
+    font-size: 15px;
+    font-weight: initial;
+    white-space: pre-line;
+}
+
+.header_ask {
+    margin-top: 5%;
+}
+
+.content_page h4 {
+    font-size: 18px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.content_page p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.content_page a {
+    color: #109aff;
+    text-decoration: none;
+}
+
+.content_page a:hover {
+    text-decoration: underline;
+}
+
+.title_frequently {
+    margin-left: auto;
+    margin-top: 5%;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.content_ask {
+    margin-top: 5%;
+}

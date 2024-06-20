@@ -5,11 +5,11 @@ import Footer from './Footer';
 
 function StorePage() {
     return (
-        <div>
+        <>
             <Header />
             <Main />
             <Footer />
-        </div>
+        </>
     );
 }
 
