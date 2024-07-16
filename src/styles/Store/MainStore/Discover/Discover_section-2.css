@@ -341,86 +341,90 @@
         padding: 20px 0;
         position: relative;
 
-        .game-card {
+        a{
+            text-decoration: none;
+            color: white;
             flex: 0 0 auto;
-            width: 18%;
-            margin-right: 30px;
-            position: relative;
-            cursor: pointer;
-            transition: transform 0.3s ease-in-out;
-
-            .img-game {
+            width: 20%;
+            .game-card {
+                margin-right: 30px;
                 position: relative;
-                display: inline-block;
+                cursor: pointer;
+                transition: transform 0.3s ease-in-out;
 
-                .span_11-add-game-to-wishlist{
-                    position: absolute;
-                    right: 10px;
-                    top: 10px;
-                    background: #000000;
-                    color: white;
-                    border: 1px solid white;
-                    border-radius: 50%;
-                    display: none;
-                    transition: .3s ease-in-out ;
-                    cursor: pointer;
-                }
+                .img-game {
+                    position: relative;
+                    display: inline-block;
 
-                img{
-                    width: 100%;
-                    transition: filter 0.3s ease;
-                    height: auto;
+                    .span_11-add-game-to-wishlist{
+                        position: absolute;
+                        right: 10px;
+                        top: 10px;
+                        background: #000000;
+                        color: white;
+                        border: 1px solid white;
+                        border-radius: 50%;
+                        display: none;
+                        transition: .3s ease-in-out ;
+                        cursor: pointer;
+                    }
+
+                    img{
+                        width: 100%;
+                        transition: filter 0.3s ease;
+                        height: auto;
+                    }
+                    &:hover{
+                        filter: brightness(1.2);
+                        .span_11-add-game-to-wishlist{
+                            display: block;
+                        }
+                    }
                 }
                 &:hover{
-                    filter: brightness(1.2);
                     .span_11-add-game-to-wishlist{
                         display: block;
                     }
                 }
-            }
-            &:hover{
-                .span_11-add-game-to-wishlist{
-                    display: block;
-                }
-            }
-            .game-info {
-                width: 100%;
-                padding: 10px;
-                border-radius: 5px;
+                .game-info {
+                    width: 100%;
+                    padding: 10px;
+                    border-radius: 5px;
 
-                h3 {
-                    height: 60px;
-                    font-size: 16px;
-                    margin: 5px 0;
-                    word-wrap: break-word;
-                    white-space: normal;
-                }
-                .prices {
-                    display: flex;
-                    justify-content: space-between;
-                    flex-direction: row;
-                    align-items: flex-start;
-
-                    .discount {
-                        margin-top: 5px;
-                        font-size: 13px;
-                        background-color: #0074E4;
-                        padding: 3px 8px;
-                        border-radius: 5px;
+                    h3 {
+                        height: 60px;
+                        font-size: 16px;
+                        margin: 5px 0;
+                        word-wrap: break-word;
+                        white-space: normal;
                     }
-
-                    .discount-sale-container{
+                    .prices {
                         display: flex;
-                        flex-direction: column;
-                        align-items: baseline;
+                        justify-content: space-between;
+                        flex-direction: row;
+                        align-items: flex-start;
 
-                        .original-price {
-                            text-decoration: line-through;
-                            color: #888;
+                        .discount {
+                            margin-top: 5px;
+                            font-size: 13px;
+                            background-color: #0074E4;
+                            padding: 3px 8px;
+                            border-radius: 5px;
                         }
 
-                        .sale-price {
-                            font-weight: bold;
+                        .discount-sale-container{
+                            display: flex;
+                            flex-direction: column;
+                            align-items: baseline;
+
+                            .original-price {
+                                text-decoration: line-through;
+                                color: #888;
+                            }
+
+                            .sale-price {
+                                font-weight: bold;
+                            }
                         }
                     }
                 }
@@ -764,23 +768,25 @@
             grid-template-columns: auto auto;
             gap: 10px;
 
-            .game-card {
+            a{
                 width: 100%;
-                cursor: pointer;
+                .game-card {
+                    cursor: pointer;
 
-                .img-game {
-                    width: 100%;
-                    position: relative;
-                    display: inline-block;
-
-                    .span_11-add-game-to-wishlist{
-                        display: none;
-                    }
-
-                    img{
+                    .img-game {
                         width: 100%;
-                        height: auto;
-                        border-radius: 5px;
+                        position: relative;
+                        display: inline-block;
+
+                        .span_11-add-game-to-wishlist{
+                            display: none;
+                        }
+
+                        img{
+                            width: 100%;
+                            height: auto;
+                            border-radius: 5px;
+                        }
                     }
                 }
             }

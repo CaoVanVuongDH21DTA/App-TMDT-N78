@@ -15,6 +15,7 @@ import farcry4 from "../../../../img/Store/farcry4.png";
 import deals from "../../../../img/Store/deals.png";
 import free_games_news from "../../../../img/Store/Free_game-news.png";
 import dyinglight2_deals from "../../../../img/Store/dyinglight2-deals.png";
+import {Link} from "react-router-dom";
 
 const Discover_section1 =() =>{
     const [scrollAmountMegaSale, setScrollAmountMegaSale] = useState(0);
@@ -298,22 +299,24 @@ const Discover_section1 =() =>{
                 <div className="games-list-container">
                     <div className="games-list" ref={MegaSaleSpotlight}>
                         {gameData.map((game, index) => (
-                            <div className="game-card" key={index}>
-                                <div className="img-game">
-                                    <button className="add-game-to-wishlist"><IoAdd size={18}/></button>
-                                    <img src={game.image} alt={game.name}/>
-                                </div>
-                                <div className="game-info">
-                                    <h3>{game.name}</h3>
-                                    <div className="prices">
-                                        <span className="discount">-{game.discount}%</span>
-                                        <div className="discount-sale-container">
-                                            <span className="original-price">₫{game.originalPrice.toLocaleString()}</span>
-                                            <span className="sale-price">₫{game.price.toLocaleString()}</span>
+                            <Link to="/paypage">
+                                <div className="game-card" key={index}>
+                                    <div className="img-game">
+                                        <button className="add-game-to-wishlist"><IoAdd size={18}/></button>
+                                        <img src={game.image} alt={game.name}/>
+                                    </div>
+                                    <div className="game-info">
+                                        <h3>{game.name}</h3>
+                                        <div className="prices">
+                                            <span className="discount">-{game.discount}%</span>
+                                            <div className="discount-sale-container">
+                                                <span className="original-price">₫{game.originalPrice.toLocaleString()}</span>
+                                                <span className="sale-price">₫{game.price.toLocaleString()}</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </Link>
                         ))}
                     </div>
                 </div>
@@ -332,22 +335,24 @@ const Discover_section1 =() =>{
                 <div className="games-list-container">
                     <div className="games-list" ref={TopNewReleases}>
                         {gameData.map((game, index) => (
-                            <div className="game-card" key={index}>
-                                <div className="img-game">
-                                    <button className="add-game-to-wishlist"><IoAdd size={18}/></button>
-                                    <img src={game.image} alt={game.name}/>
-                                </div>
-                                <div className="game-info">
-                                    <h3>{game.name}</h3>
-                                    <div className="prices">
-                                        <span className="discount">-{game.discount}%</span>
-                                        <div className="discount-sale-container">
-                                            <span className="original-price">₫{game.originalPrice.toLocaleString()}</span>
-                                            <span className="sale-price">₫{game.price.toLocaleString()}</span>
+                            <Link to="/paypage">
+                                <div className="game-card" key={index}>
+                                    <div className="img-game">
+                                        <button className="add-game-to-wishlist"><IoAdd size={18}/></button>
+                                        <img src={game.image} alt={game.name}/>
+                                    </div>
+                                    <div className="game-info">
+                                        <h3>{game.name}</h3>
+                                        <div className="prices">
+                                            <span className="discount">-{game.discount}%</span>
+                                            <div className="discount-sale-container">
+                                                <span className="original-price">₫{game.originalPrice.toLocaleString()}</span>
+                                                <span className="sale-price">₫{game.price.toLocaleString()}</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </Link>
                         ))}
                     </div>
                 </div>

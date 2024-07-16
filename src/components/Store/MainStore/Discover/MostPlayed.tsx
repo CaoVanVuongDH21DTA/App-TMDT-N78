@@ -5,7 +5,7 @@ import '../../../../styles/Store/MainStore/Discover/ShowMore.css';
 
 function MostPlayed() {
     return(
-        <div className="container">
+        <div className="page_showmore">
             <h1>Most Played</h1>
             <div className="list">
                 {dataMostPlayed.map((game, index) => (

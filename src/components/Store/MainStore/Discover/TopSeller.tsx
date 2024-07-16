@@ -5,7 +5,7 @@ import '../../../../styles/Store/MainStore/Discover/ShowMore.css';
 
 function TopSeller() {
     return (
-        <div className="container">
+        <div className="page_showmore">
             <h1>Top Sellers</h1>
             <div className="list">
                 {dataTopSeller.map((game, index) => (

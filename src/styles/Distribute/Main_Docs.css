@@ -1,0 +1,287 @@
+:root {
+    --background-input: rgba(255, 255, 255);
+    --background-search: rgba(255, 255, 255, 0.7);
+    --background-color: rgb(242, 242, 242);
+    --text-color: rgba(20, 20, 20, 0.72);
+    --hover-text-color: rgba(20, 20, 20);
+    --hover-bg: brightness(.96);
+
+    --background-btn-color: rgb(230, 230, 230);
+    --background-btn-nav-item:rgba(20, 20, 20, 0.16);
+    --background-list-section:white;
+    --border-list-section:rgba(20, 20, 20, 0.16);
+    --background-main:white;
+    --background-E_Dev_Res: url(	https://dev.epicgames.com/docs/app-images/home-hero-light.webp) left top / 100% 428px no-repeat,
+                            linear-gradient(175deg, rgba(50, 81, 183, 0.8) 5%, rgba(147, 137, 199, 0.8) 15%,
+                                rgb(229, 229, 229) 410px, rgb(229, 229, 229) 100%);
+}
+
+[data-theme='dark'] {
+    --background-input: rgba(255, 255, 255, 0.08);
+    --background-search: rgba(20, 20, 20, 0.5);
+    --background-color: rgb(20, 20, 20);
+    --text-color: rgba(255, 255, 255, .72);
+    --hover-text-color: rgba(255, 255, 255);
+    --hover-bg: brightness(1.2);
+
+    --background-btn-color: rgb(39, 39, 39);
+    --background-btn-nav-item:rgba(255, 255, 255, 0.24);
+    --background-list-section:rgb(58, 58, 58);
+    --border-list-section:rgb(58, 58, 58);
+    --background-main: rgb(39,39,39);
+    --background-E_Dev_Res: url(https://dev.epicgames.com/docs/app-images/home-hero-dark.webp) left top / 100% 428px no-repeat,
+                            linear-gradient(175deg, rgba(50, 81, 183, 0.8) 5%, rgba(147, 137, 199, 0.8) 15%,
+                                    rgb(39, 39, 39) 410px, rgb(39, 39, 39) 100%);
+}
+.page-docs {
+    z-index: 2;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    letter-spacing: 0.01em;
+    line-height: 1.43;
+    color: var(--text-color);
+    background-color: var(--background-color);
+
+    .sidebar {
+        background-color: var(--background-color);
+        font-size: 14px;
+        width: 320px;
+        overflow: hidden auto;
+        height: 100%;
+        position: sticky;
+        top: 0px;
+
+        .show-aside{
+            .show-hide-sidebar{
+                position: relative;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                margin: 0px;
+                padding: 24px 36px 22px 20px;
+                box-shadow: none;
+                background: var(--background-btn-nav-item);
+                font-size: 10px;
+                color: var(--text-color);
+                font-weight: 700;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .icon-show-hide-sidebar{
+                    color: var(--text-color);
+                    transition: transform .2s ease 0s;
+
+                    &.rotate {
+                        transform: rotate(180deg);
+                        .icon{
+                            transition: transfrom .2s ease 0s;
+                        }
+                    }
+                }
+            }
+        }
+
+        .navigation-tree {
+            width: 100%;
+            position: relative;
+            padding: 20px 14px 10px;
+            display: block;
+
+            &.hide{
+                display: none;
+            }
+
+            .nav-main {
+                .nav-container {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    height: calc(-90px + 100vh);
+                    transition: height 0.2s ease-in 0s;
+                    margin-bottom: 18px;
+
+                    .menu {
+                        display: block;
+                        margin: 0px;
+                        padding: 0px;
+                        text-decoration: none;
+                        list-style-type: disc;
+                        flex: 1;
+
+                        .item {
+                            font-size: 14px;
+                            display: block;
+
+                            .designer-item {
+                                cursor: pointer;
+
+                                &.active{
+                                    font-weight: bold;
+                                    background-color: rgba(170, 170, 174, 0.6);
+                                    border-radius: 10px;
+                                }
+                                &:active {
+                                    background: var(--background-btn-nav-item);
+                                    border-radius: 10px;
+                                    opacity: 1;
+                                }
+
+                                .bg-item {
+                                    position: relative;
+                                    margin: 0px;
+                                    padding-left: 32px;
+
+                                    .icon-item {
+                                        position: absolute;
+                                        top: 14px;
+                                        left: 10px;
+                                        cursor: pointer;
+                                        transition: transform .3s linear;
+                                        opacity: .7;
+
+                                        &.rotate {
+                                            transform: rotate(90deg);
+                                            .icon-show-list{
+                                                transition: transform .2s ease 0s;
+                                            }
+                                        }
+                                    }
+
+                                    .not-icon {
+                                        display: none;
+                                    }
+
+                                    a {
+                                        display: block;
+                                        padding: 12px 10px 12px 0px;
+                                        text-decoration: none;
+                                        opacity: .8;
+                                        color: var(--text-color);
+                                    }
+                                }
+
+                            }
+
+                            .menu-item {
+                                padding-left: 20px;
+
+                                &.hide {
+                                    display: none;
+                                }
+
+                                &.show {
+                                    display: block;
+                                }
+                            }
+                        }
+
+                        .border_item {
+                            border-bottom: 1px solid var(--background-btn-nav-item);
+                            margin-bottom: 20px;
+                            padding-bottom: 20px;
+                        }
+                    }
+
+                    .theme {
+                        padding-bottom: 18px;
+
+                        .switch-theme {
+                            position: relative;
+                            box-sizing: border-box;
+                            width: 220px;
+                            height: 40px;
+                            border-radius: 4px;
+                            background: var(--background-btn-color);
+                            padding: 5px;
+                            display: flex;
+                            font-size: 14px;
+                            cursor: pointer;
+                            user-select: none;
+                            margin: 0px auto;
+
+                            .indicator {
+                                position: absolute;
+                                top: 5px;
+                                bottom: 5px;
+                                width: 100px;
+                                background: var(--background-color);
+                                border-radius: 4px;
+                                transition: transform 0.3s ease;
+
+                                &.light {
+                                    transform: translateX(0);
+                                }
+
+                                &.dark {
+                                    transform: translateX(100px);
+                                }
+                            }
+
+                            button {
+                                flex: 1 1 0;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                position: relative;
+                                z-index: 100;
+                                width: 105px;
+                                gap: 10px;
+                                box-sizing: border-box;
+                                border: none;
+                                background: none;
+                                font-family: inherit;
+                                cursor: pointer;
+                                color: var(--text-color);
+
+                                &.active {
+                                    background: var(--background-color);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 736px) {
+    .page-docs{
+        flex-direction: column;
+        .sidebar{
+            width: 100%;
+            position: relative;
+            transition: transform .3s ease-in-out;
+            .navigation-tree{
+                .nav-main{
+                    .nav-container{
+                        height: 80vh;
+                        .theme{
+                            padding: 0;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+@media only screen and (min-width: 736px) and (max-width: 1024px) {
+    .page-docs{
+        flex-direction: column;
+        .sidebar{
+            width: 100%;
+            position: relative;
+            .navigation-tree{
+                .nav-main{
+                    .nav-container{
+                        height: 87vh;
+                    }
+                }
+            }
+        }
+    }
+}

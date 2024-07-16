@@ -1,0 +1,241 @@
+.header_admin {
+    width: 100%;
+    position: relative;
+
+    nav {
+        .container {
+            background: inherit;
+            padding: 0;
+            display: flex;
+            flex: 1 0%;
+            gap: 40px;
+
+            .navbar-brand{
+                cursor: default;
+            }
+            .nav_header {
+                display: flex;
+                justify-content: space-between;
+                gap: 10px;
+                width: 40%;
+                z-index: 1;
+
+                .item-nav {
+                    width: 100%;
+                    text-align: center;
+                    a {
+                        text-decoration: none;
+                        padding: 8px 16px;
+                        margin-right: 5px;
+                        font-size: 14px;
+                        border-radius: 10px;
+                        transition: background-color 0.5s ease;
+                        position: relative;
+                        color: white;
+                        &:hover {
+                            background-color: #13ddfa;
+                        }
+                    }
+
+                    .showList {
+                        background: none;
+                        outline: none;
+                        border: none;
+                        border-radius: 10px;
+                        transition: color 0.5s ease, background-color 0.5s ease;
+                        color: white;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        .icon {
+                            display: none;
+                        }
+                        &:hover {
+                            color: white;
+                            background-color: #13ddfa;
+                        }
+                    }
+                    &:hover .dropdown-list {
+                        display: block;
+                    }
+
+                    .dropdown-list {
+                        display: none;
+                        position: absolute;
+                        z-index: 1;
+
+                        .backgroungd_none {
+                            height: 30px;
+                        }
+
+                        .list-profile-page {
+                            background: #1d9ffd;
+                            width: 320px;
+                            border-radius: 10px;
+                            padding: .2rem .8rem;
+                            position: relative;
+
+                            .list {
+                                padding: 0;
+                                margin: 0;
+
+                                li {
+                                    position: relative;
+                                    list-style: none;
+                                    padding: .4rem 0;
+                                    width: 100%;
+
+                                    a {
+                                        display: block;
+                                        width: 100%;
+                                        &:hover{
+                                            background-color: #13ddfa;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .nav-dropdown {
+                    position: relative;
+
+                    .dropdown-menu {
+                        display: none;
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        background-color: white;
+                        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+                        list-style: none;
+                        padding: 0;
+                        margin: 0;
+                        z-index: 1000;
+
+                        li {
+                            padding: 8px 16px;
+
+                            .nav-link {
+                                color: #000;
+
+                                &:hover {
+                                    background-color: #f8f9fa;
+                                }
+                            }
+                        }
+                    }
+
+                    &:hover .dropdown-menu {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    .btn_menu-header {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .header_admin {
+        background-color: #0d6efd;
+        nav {
+            margin: 0 auto;
+            width: 90%;
+            .container {
+                .nav_header {
+                    display: none;
+                    &.show {
+                        display: flex;
+                        flex-direction: column;
+                        background-color: #007bff;
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        width: 100%;
+                        padding: 10px 0;
+
+                        .item-nav {
+                            position: relative;
+                            a {
+                                height: 40px;
+                                text-align: left;
+                            }
+
+                            .showList {
+                                height: 40px;
+                                text-align: left;
+                                padding: 8px 1rem;
+                                span{
+                                    width: 100%;
+                                }
+
+                                .icon {
+                                    display: none;
+                                }
+                                &:hover {
+                                    color: white;
+                                    background-color: #13ddfa;
+                                }
+                            }
+
+                            .dropdown-list {
+                                display: none;
+                                position: relative;
+                                top: 100%;
+                                left: 0;
+                                width: 100%;
+                                z-index: 1;
+
+                                &.active{
+                                    margin: 0 auto;
+                                    display: block;
+                                }
+                                .backgroungd_none {
+                                    display: none;
+                                }
+
+                                .list-profile-page {
+                                    width: 100%;
+                                    background: inherit;
+
+                                    .list {
+                                        padding: 0;
+                                        margin: 0;
+
+                                        li {
+                                            position: relative;
+                                            list-style: none;
+                                            padding: .4rem 0;
+                                            width: 100%;
+
+                                            a {
+                                                display: block;
+                                                width: 100%;
+                                                text-align: center;
+                                                &:hover{
+                                                    background-color: #13ddfa;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .btn_menu-header {
+            display: block;
+            position: relative;
+            cursor: pointer;
+            color: white;
+        }
+    }
+}

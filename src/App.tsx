@@ -2,30 +2,27 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import StorePage from './components/Store/StorePage';
 import Login from './components/Login/Login';
-import Discover from "./components/Store/MainStore/Discover/Discover";
-import Browse from "./components/Store/MainStore/Browse/Browse";
-import News from "./components/Store/MainStore/News/News";
-import TopSeller from "./components/Store/MainStore/Discover/TopSeller";
-import MostPlayed from "./components/Store/MainStore/Discover/MostPlayed";
-import TopUpcommingWishlisted from "./components/Store/MainStore/Discover/TopUpconmingWishlisted";
-import DeveloperForums from "./components/Distribute/DeveloperForums";
-import Documentation from "./components/Distribute/Documentation";
+import Register from "./components/Login/Register";
+import {Admin} from "./components/Admin/Admin";
+import DocsPage from "./components/Distribute/Documentation/DocsPage";
 
 function App() {
     return (
         <Router>
             <Routes>
-                <Route path="/" element={<StorePage />}>
-                    <Route index element={<Discover />} />
-                    <Route path="/Browse" element={<Browse />} />
-                    <Route path="/News" element={<News />} />
-                    <Route path="/TopSeller" element={<TopSeller />} />
-                    <Route path="/MostPlayed" element={<MostPlayed/>} />
-                    <Route path="/TopUpcommingWishlisted" element={<TopUpcommingWishlisted/>} />
-                </Route>
+                {/*Admin Page*/}
+                <Route path="/admin/*" element={<Admin/>}/>
+
+                {/* Login page */}
                 <Route path="/login" element={<Login />} />
-                <Route path="/DeveloperForums" element={<DeveloperForums />} />
-                <Route path="/Documentation" element={<Documentation />} />
+
+                {/*register page*/}
+                <Route path="/register" element={<Register />} />
+
+                {/* Store page */}
+                <Route path="/*" element={<StorePage />}/>
+
+                <Route path="/docs/*" element={<DocsPage />}/>
             </Routes>
         </Router>
     );
