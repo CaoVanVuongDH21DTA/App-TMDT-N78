@@ -1,0 +1,228 @@
+.main-contact {
+    background: #141414;;
+    color: #fff;
+    min-height: 100vh;
+    padding: 20px;
+
+    .contact-header {
+        width: 100%;
+
+        .contact-title {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            .title-contact-left {
+                display: flex;
+                align-items: center;
+
+            }
+                .icon-title {
+                    margin: 0 10px;
+                }
+                .title-contact-mid {
+                    display: flex;
+                    align-items: center;
+                }
+                .title-contact-right {
+                    display: flex;
+                    align-items: center;
+                }
+                .title-mobile {
+                    display: none;
+                }
+        }
+    }
+    .contact-mid {
+        width: 100%;
+
+        .contact-content {
+            .main-content {
+                display: flex;
+                justify-content: center;
+                font-size: 44px;
+                font-family: Inter, sans-serif;
+                color: #FFFFFF;
+                font-weight: normal;
+            }
+            .secondary-content {
+                display: flex;
+                align-items: flex-start;
+                justify-content: center;
+                flex-direction: column;
+                text-align: left;
+                width: fit-content;
+                margin: auto;
+            }
+        }
+            .btn-contact-section {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                margin-top: 30px;
+                align-items: center;
+
+               .btn-contact-login {
+                   background: #007bff;
+                   color: #fff;
+                   width: 100%;
+                   height: 50px;
+                   padding: 10px 20px;
+                   margin-bottom: 20px;
+                   border: none;
+                   border-radius: 5px;
+                   font-weight: bold;
+                   cursor: pointer;
+                   transition: background 0.3s;
+
+                   &:hover {
+                       background: #0056b3;
+                   }
+               }
+                .btn-contact-create {
+                    background: #3a3a3a;
+                    color: #fff;
+                    width: 350px;
+                    height: 50px;
+                    padding: 10px 20px;
+                    margin-bottom: 20px;
+                    border: none;
+                    font-weight: bold;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    transition: background 0.3s;
+
+                    &:hover {
+                        background: #3a3a3a;
+                }
+            }
+        }
+        .separator {
+            width: 34%;
+            justify-content: center;
+            align-items: center;
+            border: 0;
+            height: 1px;
+            background: #FFFFFF29;
+            margin: 20px auto;
+        }
+
+        .contact-help {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+            text-align: left;
+            width: fit-content;
+            margin: auto;
+            font-size: 1.4rem;
+
+            span {
+                margin-bottom: 30px;
+            }
+
+            .help-row1 {
+
+            &:hover {
+                text-decoration: underline;
+                }
+            }
+            .help-row2 {
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+/* Smartphones */
+@media only screen and (max-width: 736px) {
+    .main-contact {
+        width: 100%;
+        height: auto;
+
+        .contact-header {
+            width: 100%;
+            padding: 10px;
+            height: auto;
+
+            .contact-title {
+                display: flex;
+
+                .title-contact-left,
+                .title-contact-mid,
+                .title-contact-right {
+                    display: none;
+                }
+                .title-mobile {
+                    display: flex;
+                    color: #FFFFFF;
+                    text-decoration: underline;
+                    font-size: 15px;
+                    align-items: center;
+                }
+                .icon-title-mobile {
+                    margin-right: 5px;
+                }
+            }
+        }
+        .contact-mid {
+            width: 100%;
+            padding: 0;
+
+            .contact-content {
+                width: 100%;
+                .main-content {
+                    display: flex;
+                    font-size: 30px;
+                }
+                .secondary-content {
+                    display: flex;
+                    font-size: 16px;
+                }
+            }
+                .btn-contact-section {
+                    display: flex;
+                    width: 100%;
+
+                    .btn-contact-login {
+                        width: 300px;
+                        height: 50px;
+                        padding: 10px;
+                        margin: 5px 0;
+                        overflow: hidden;
+                        font-size: 16px;
+                        text-align: center;
+                        background-color: #109aff;
+                        color: #ffffff;
+                        border: none;
+                        border-radius: 5px;
+                    }
+                    .btn-contact-create {
+                        width: 300px;
+                        height: 50px;
+                        padding: 10px;
+                        margin: 5px 0;
+                        overflow: hidden;
+                        font-size: 14px;
+                        text-align: center;
+                        background-color: #3a3a3a;
+                        color: #ffffff;
+                        border: none;
+                        border-radius: 5px;
+                }
+            }
+            .separator {
+                width: 100%;
+            }
+            .contact-help {
+                display: flex;
+                width: 100%;
+                font-size: 16px;
+            }
+        }
+    }
+}

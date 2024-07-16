@@ -1,0 +1,260 @@
+.footer_store {
+    background-color: #181818;
+    color: #fff;
+    padding: 20px 72px;
+    text-align: center;
+    z-index: 10;
+    position: relative;
+
+    .footer-social-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .social-media {
+            margin-bottom: 20px;
+
+            a {
+                color: #fff;
+                margin: 0 10px;
+                text-decoration: none;
+                font-size: 24px;
+            }
+        }
+
+        .back-to-top{
+            #back-to-top{
+                border: none;
+                background-color: inherit;
+                cursor: pointer;
+                transition: all .3s ease;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                .icon{
+                    transition: color .5s ease-in-out;
+                }
+                p{
+                    text-transform: uppercase;
+                    color: white;
+                    margin: 0;
+                }
+                &:hover{
+                    .icon, p{
+                        color: blue!important;;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-content {
+        display: flex;
+        margin: 16px 10px;
+        gap: 40px;
+
+
+        /*page docs*/
+        .list{
+            width: 180px;
+            display: flex;
+            flex-direction: column;
+            h4 {
+                margin-bottom: 10px;
+                text-align: left;
+                text-transform: uppercase;
+            }
+
+            ul {
+                list-style: none;
+                padding: 0;
+                text-align: left;
+
+                li {
+                    padding: 3px 0;
+                    margin-bottom: 5px;
+                    width: 100%;
+                    position: relative;
+
+                    a {
+                        display: block;
+                        color: #ccc;
+                        text-decoration: none;
+                        transition: color .3s ease-in-out;
+
+                        &:hover {
+                            color: blue;
+                        }
+                    }
+                }
+            }
+        }
+
+        /*Store and Support*/
+        .content{
+            width: auto;
+            h4 {
+                margin-bottom: 10px;
+                opacity: .4;
+                text-align: left;
+            }
+
+            .list{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+
+                ul {
+                    list-style: none;
+                    padding: 0;
+                    text-align: left;
+
+                    li {
+                        margin-bottom: 5px;
+                        width: 160px;
+
+                        a {
+                            color: #ccc;
+                            text-decoration: none;
+                            transition: color .3s ease-in-out;
+
+                            &:hover {
+                                color: blue;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-bottom {
+        margin-top: 20px;
+        font-size: 12px;
+        text-align: left;
+
+        .copyright{
+            width: 50%;
+            margin: 16px 10px;
+
+            p {
+                margin: 10px 0;
+            }
+        }
+
+        .footer-legal{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 16px;
+
+            .footer-links {
+                margin-top: 10px;
+
+                a {
+                    color: #ccc;
+                    text-decoration: none;
+                    margin: 0 10px;
+                    transition: .3s ease-in-out;
+
+                    &:hover {
+                        color: blue;
+                    }
+                }
+            }
+
+            .logos{
+                display: flex;
+                flex-direction: row;
+                list-style: none;
+                gap: 20px;
+
+                li a{
+                    opacity: .7;
+                    transition: .3s opacity;
+
+                    .logo{
+                        background-color: #e6e6ea;
+                        background-position: center center;
+                        flex-shrink: 0;
+                        height: 1.25rem;
+                        width: 1.25rem;
+                        mask-position: center center;
+                        mask-repeat: no-repeat;
+                        mask-size: cover;
+                    }
+
+                    &:hover{
+                        opacity: 1.5;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*Smartphones */
+@media only screen and (max-width: 736px) {
+    .footer_store{
+        padding: 16px 24px;
+        .footer-social-container{
+            .back-to-top{
+                #back-to-top{
+                    p{
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .footer-content{
+            flex-direction: column;
+            .content{
+                .list{
+                    font-size: 13px;
+                    display: grid;
+                    grid-template-columns: auto auto;
+                    gap: 5px;
+                }
+            }
+        }
+
+        .footer-bottom{
+            .copyright{
+                width: 100%;
+            }
+            .footer-legal{
+                flex-direction: column;
+                align-items: center;
+
+                .footer-links{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+                .legal{
+                    display: flex;
+                    align-items: center;
+                    flex-direction: row;
+                    .logos{
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+
+}
+/*iPads */
+@media only screen and (min-width: 736px) and (max-width: 1024px) {
+    .footer_store{
+        .footer-bottom{
+            .copyright{
+                width: 100%;
+                margin-right: 0;
+            }
+        }
+    }
+}

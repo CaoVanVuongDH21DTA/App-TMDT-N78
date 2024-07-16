@@ -32,6 +32,7 @@
                                 font-size: 16px;
                             }
                             .dropdown-select{
+                                align-items: center;
                                 .select-btn{
                                     padding: 0 5px;
                                     height: 30px;
@@ -42,12 +43,22 @@
                                     border: none;
                                     line-height: 20px;
 
+                                    &.rotate{
+                                        .icon-logo{
+                                            transform: rotate(180deg);
+                                        }
+                                    }
+
                                     .select{
                                         display: flex;
                                         align-items: center;
                                         flex-direction: row;
                                         height: 100%;
                                         gap: 10px;
+
+                                        .icon-logo{
+                                            transition: transform .3s linear;
+                                        }
 
                                         .text{
                                             font-size: 14px;

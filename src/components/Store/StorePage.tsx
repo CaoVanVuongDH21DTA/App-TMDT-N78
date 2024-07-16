@@ -1,16 +1,14 @@
 import React from 'react';
-import Header from './Header';
-import Main from './MainStore/Main';
-import Footer from './Footer';
+import Header from '../Header';
+import Main from '../Main';
+import Footer from '../Footer';
 
-function StorePage() {
+export default function StorePage (){
     return (
-        <>
+        <div style={{display: "flex", flexDirection: "column", justifyContent: "space-between", height: "100vh", background:"#121212"}}>
             <Header />
-            <Main />
+            <Main/>
             <Footer />
-        </>
+        </div>
     );
 }
-
-export default StorePage;

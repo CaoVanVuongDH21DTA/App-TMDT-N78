@@ -1,0 +1,299 @@
+.report-page {
+    background: #1a1a1a;
+    color: #fff;
+    min-height: 100vh;
+    padding: 20px;
+
+    .report-page-header {
+        background: url('https://cdn2.unrealengine.com/fn-br-c5s3-category-3000x1687-57f409e4b14b.jpg');
+        background-size: cover;
+        width: 100%;
+        height: 300px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+        .title-report {
+            display: flex;
+            justify-content: flex-start;
+            width: 100%;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+
+            .title-report-left {
+                display: flex;
+                align-items: center;
+
+                .icon-title {
+                    margin: 0 10px;
+                }
+
+                .title-report-right {
+                    font-size: 1.5em;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .title-content-mid {
+            font-size: 5rem;
+            font-weight: bold;
+            align-items: center;
+            margin-bottom: 20px;
+            z-index: 100;
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .search-container {
+            display: flex;
+            align-items: center;
+            background: white;
+            border-radius: 5px;
+            padding: 5px 10px;
+            width: 100%;
+
+            .search-icon {
+                color: black;
+                margin-right: 10px;
+            }
+
+            .search-input {
+                background: none;
+                border: none;
+                outline: none;
+                color: black;
+                width: 100%;
+                padding: 10px;
+
+                &::placeholder {
+                    color: #bbb;
+                }
+            }
+        }
+    }
+
+    .report-page-mid {
+        padding: 40px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #fff;
+
+        .content-report {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+
+            .option-report {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background: #333;
+                padding: 20px;
+                border-radius: 5px;
+                width: 150px;
+                height: 150px;
+                text-align: center;
+                font-size: 1.2em;
+                color: #fff;
+                transition: background 0.3s;
+
+                svg, img {
+                    margin-bottom: 10px;
+                    width: 40px;
+                    height: 40px;
+                }
+
+                &:hover {
+                    background: #444;
+                }
+            }
+        }
+    }
+
+    .additional-content {
+        padding: 20px;
+        color: #fff;
+        .trending {
+            margin-bottom: 40px;
+            text-align: center;
+            h2 {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                justify-content: center;
+            }
+            ul {
+                list-style: none;
+                padding: 0;
+                li {
+                    margin-bottom: 10px;
+                    align-items: center;
+                }
+            }
+        }
+        .contact-section {
+            text-align: center;
+            h3 {
+                margin-bottom: 20px;
+            }
+            p {
+                margin-bottom: 30px;
+            }
+            .contact-options {
+                display: flex;
+                justify-content: space-around;
+                margin-bottom: 20px;
+                .option-section {
+                    background: #333;
+                    border-radius: 5px;
+                    text-align: center;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    gap: 10px;
+                    transition: background 0.3s;
+                    margin-bottom: 10px;
+
+                    svg {
+                        margin-bottom: 10px;
+                        width: 30px;
+                        height: 30px;
+                    }
+
+                    &:hover {
+                        background: #444;
+                    }
+                }
+            }
+            .contact-us-btn {
+                background: #007bff;
+                color: #fff;
+                width: 300px;
+                height: 50px;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background 0.3s;
+
+                &:hover {
+                    background: #0056b3;
+                }
+            }
+        }
+    }
+}
+
+/* Smartphones */
+@media only screen and (max-width: 736px) {
+    .report-page {
+        width: 100%;
+        height: auto;
+    }
+    .report-page .report-page-mid .content-report .option-report {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        height: 5rem;
+        padding: 10px;
+        background-color: hsla(0, 0%, 100%, .04);
+        border-radius: 5px;
+        font-size: 1.1em;
+
+        svg, img {
+            margin: 0 10px 0 0;
+            width: 30px;
+            height: 30px;
+        }
+
+        &:hover {
+            background: #444;
+        }
+    }
+
+    .contact-section {
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+        color: #fff;
+
+        h3 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1em;
+            margin-bottom: 20px;
+        }
+
+        .contact-options {
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .option-section {
+            align-items: flex-start;
+            background-color: hsla(0, 0%, 100%, .04);
+            border-radius: 4px;
+            color: #fff;
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            height: 100%;
+            justify-content: flex-start;
+            padding: 15px;
+
+            svg, img {
+                margin-right: 10px;
+                width: 20px;
+                height: 20px;
+            }
+
+            &:hover {
+                background: hsla(0, 0%, 100%, .04);
+            }
+        }
+
+        .contact-us-btn {
+            align-items: center;
+            background-color: #0074e4;
+            border: none;
+            border-radius: 4px;
+            color: #fff;
+            display: flex;
+            font-size: .75rem;
+            font-weight: 700;
+            justify-content: center;
+            letter-spacing: 1px;
+            line-height: 1.25rem;
+            margin: 0;
+            min-height: 50px;
+            padding: 10px 20px;
+            text-transform: uppercase;
+
+            &:hover {
+                background: #0056b3;
+            }
+        }
+    }
+}
+
+
+
+
+

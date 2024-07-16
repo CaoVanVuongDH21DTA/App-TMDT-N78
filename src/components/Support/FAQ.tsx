@@ -67,7 +67,7 @@ const FAQ: React.FC = () => {
     ];
 
     return (
-        <main className="main-content">
+        <main className="faq">
             <div className="title_faq">FREQUENTLY ASKED QUESTIONS</div>
 
             <div className="content_mid">

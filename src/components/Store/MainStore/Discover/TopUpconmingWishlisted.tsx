@@ -5,7 +5,7 @@ import '../../../../styles/Store/MainStore/Discover/ShowMore.css';
 
 function TopUpcommingWishlisted() {
     return(
-        <div className="container">
+        <div className="page_showmore">
             <h1>Top Upcomming Wishlisted</h1>
             <div className="list">
                 {dataTopUpcommingWishlisted.map((game, index) => (

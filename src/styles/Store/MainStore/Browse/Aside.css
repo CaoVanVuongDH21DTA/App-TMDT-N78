@@ -1,4 +1,4 @@
-aside{
+.sibar_browse{
     width: 245px;
     flex-shrink: 0;
 
@@ -40,73 +40,106 @@ aside{
         }
     }
 
-    span{
-        .btn{
-            display: flex;
-            flex-direction: column;
-
-            button{
+    .list-filter {
+        padding: 0;
+        list-style: none;
+        .item-filter {
+            .btn {
                 display: flex;
-                justify-content: space-between;
-                background: none;
-                align-items: center;
-                border: none;
-                border-radius: 3px;
-                color: rgb(245, 245, 245);
-                opacity: 0.6;
-                padding: 30px 14px;
-                width: 100%;
-                position: relative;
+                flex-direction: column;
+                padding-left: 0;
+                padding-right: 0;
 
-                &:after {
-                    content: '';
-                    position: absolute;
-                    left: 14px;
-                    right: 14px;
-                    bottom: 0;
-                    height: 1px;
-                    background-color: #AAAAAE;
-                }
-
-                &:hover{
-                    opacity: 1;
-                }
                 &:active{
-                    border: 1px solid white;
+                    border: none;
                 }
-            }
-        }
-        .list{
-            .name{
-                align-items: center;
-                border: 1px solid transparent;
-                border-radius: 3px;
-                display: flex;
-                justify-content: space-between;
-                margin-bottom: 5px;
-                color: rgba(245, 245, 245, 0.6);
-                padding: 12px;
-                pointer-events: all;
-                &:hover{
-                    background: rgba(50, 50, 50, 0.5);
-                        color: rgba(245, 245, 245);
+
+                .btn-show-list {
+                    display: flex;
+                    justify-content: space-between;
+                    background: none;
+                    align-items: center;
+                    border: none;
+                    border-radius: 3px;
+                    color: rgb(245, 245, 245);
+                    opacity: 0.6;
+                    padding: 30px 14px;
+                    width: 100%;
+                    position: relative;
+
+                    &.rotate{
+                        .icon-logo{
+                            transform: rotate(180deg);
+                        }
+                    }
+
                     p{
+                        margin: 0;
+                    }
+
+                    .icon-logo{
+                        transition: transform .3s linear;
+                    }
+
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        left: 14px;
+                        right: 14px;
+                        bottom: 0;
+                        height: 1px;
+                        background-color: #AAAAAE;
+                    }
+
+                    &:hover {
+                        opacity: 1;
+                    }
+
+                    &:active {
+                        border: 1px solid white;
                     }
                 }
             }
 
-            &.show {
-                display: block;
-            }
+            .list {
+                border: none;
+                list-style: none;
+                padding: 0;
+                .name {
+                    align-items: center;
+                    border: 1px solid transparent;
+                    border-radius: 3px;
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 5px;
+                    color: rgba(245, 245, 245, 0.6);
+                    padding: 12px;
+                    pointer-events: all;
+                    height: auto;
+                    text-align: center;
+                    p {
+                        margin: 0;
+                    }
+                    &:hover {
+                        background: rgba(50, 50, 50, 0.5);
+                        color: rgba(245, 245, 245);
+                        padding-left: 1rem;
+                    }
+                }
 
-            &.hide {
-                display: none;
+                &.show {
+                    display: block;
+                }
+
+                &.hide {
+                    display: none;
+                }
             }
         }
     }
 }
 @media only screen and (max-width: 736px) {
-    aside{
+    .sibar_browse{
         display: none;
     }
 }

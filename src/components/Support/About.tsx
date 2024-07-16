@@ -3,7 +3,7 @@ import '../../styles/Support/About.css'
 
 const About: React.FC = () => {
     return(
-        <main className="about-main">
+        <main className="about">
             <div className="title_about">ABOUT EPIC GAMES</div>
             <div className="content_page">
                 <h1>Founded in 1991, Epic Games is an American company founded
@@ -33,24 +33,24 @@ const About: React.FC = () => {
                     Cary, NC USA.
                     Tel +1 919 854 0070</h3>
                 <div className="header_ask">
-            <div>
-                <h4>Interested in employment opportunities with Epic?</h4>
-                <p>We’re hiring! Visit the <a href="https://www.epicgames.com/site/en-US/careers">Epic Games
-                    Careers</a> portal.</p>
-            </div>
+                <div>
+                    <h4>Interested in employment opportunities with Epic?</h4>
+                    <p>We’re hiring! Visit the <a href="https://www.epicgames.com/site/en-US/careers">Epic Games
+                        Careers</a> portal.</p>
+                </div>
 
-            <div>
-                <h4>Interested in employment opportunities with Epic?</h4>
-                <p>We’re hiring! Visit the <a href="https://www.epicgames.com/site/en-US/careers">Epic Games
-                    Careers</a> portal.</p>
-            </div>
+                <div>
+                    <h4>Interested in employment opportunities with Epic?</h4>
+                    <p>We’re hiring! Visit the <a href="https://www.epicgames.com/site/en-US/careers">Epic Games
+                        Careers</a> portal.</p>
+                </div>
 
-            <div>
-                <h4>Interested in employment opportunities with Epic?</h4>
-                <p>We’re hiring! Visit the <a href="https://www.epicgames.com/site/en-US/careers">Epic Games
-                    Careers</a> portal.</p>
-            </div>
-            </div>
+                <div>
+                    <h4>Interested in employment opportunities with Epic?</h4>
+                    <p>We’re hiring! Visit the <a href="https://www.epicgames.com/site/en-US/careers">Epic Games
+                        Careers</a> portal.</p>
+                </div>
+                </div>
 
                 <div className="title_frequently">Frequently Asked Questions</div>
 
@@ -120,7 +120,6 @@ const About: React.FC = () => {
                     </div>
                 </div>
             </div>
-
         </main>
     );
 }

@@ -1,0 +1,222 @@
+.Kid_WS-section {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0;
+    overflow: clip;
+    background-color: var(--background-main);
+    position: relative;
+    width: 100%;
+
+    .top-main-docs{
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        background: linear-gradient(90deg, rgba(32, 33, 79, 0.8) 0%, rgba(32, 33, 79, 0) 100%, rgba(32, 33, 79, 0.2) 100%), rgb(190, 61, 255);
+        min-height: 280px;
+        padding: 40px 60px;
+        margin-bottom: 48px;
+        color: white;
+        .hero_header{
+            margin-bottom: 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 2;
+            .content{
+                padding-left: 0px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                background-color: inherit;
+                border: none;
+                font-size: 14px;
+                width: calc(100% - 380px);
+
+                nav{
+                    margin: 0px;
+                    font-weight: 400;
+                    font-size: 0.875rem;
+                    line-height: 1.43;
+
+                    .path{
+                        list-style: none;
+                        padding: 0;
+                        flex-wrap: nowrap;
+                        justify-items: center;
+                        display: flex;
+                        gap: 10px;
+                        .path-item{
+                            color: white;
+                            white-space: nowrap;
+                            a{
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+            .search{
+                position: relative;
+
+                .icon-search{
+                    position: absolute;
+                    top: 50%;
+                    left: 10px;
+                    color: var(--text-color);
+                    transform: translate(0, -50%);
+                }
+
+                .search-bar {
+                    height: 40px;
+                    padding-left: 40px;
+                    width: 360px;
+                    border: none;
+                    outline: none;
+                    color: var(--text-color);
+                    border-radius: 5px;
+                    background-color: var(--background-color);
+                }
+            }
+        }
+        .hero_main{
+            max-width: 760px;
+            align-items: center;
+            h1{
+                margin-top: 0px;
+                font-size: 40px;
+            }
+            p{
+                font-size: 18px;
+            }
+        }
+    }
+
+    .main{
+        background: var(--background-main);
+        display: flex;
+        flex-direction: row;
+        flex: 1 1 0%;
+        font-size: 14px;
+        width: 100%;
+
+        .container{
+            max-width: 860px;
+            padding: 2px 40px 78px 60px;
+            width: 100%;
+            background: var(--background-main);
+            color: var(--text-color);
+            margin: 0;
+            .list{
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+                align-items: flex-start;
+                padding: 0px;
+                gap: 8px;
+                a{
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    margin-bottom: 8px;
+                    padding: 16px 20px;
+                    color: var(--text-color);
+                    background-color: var(--background-list-section);
+                    border: 1px solid var(--border-list-section);
+                    border-radius: 4px;
+                    text-decoration: none;
+                    position: relative;
+
+                    &:before{
+                        content: "";
+                        position: absolute;
+                        top: -1px;
+                        bottom: -1px;
+                        left: -1px;
+                        width: 4px;
+                        border-radius: 4px 0px 0px 4px;
+                        background-color:rgb(190, 61, 255);
+                    }
+                    &:hover{
+                        filter: var(--hover-bg);
+                    }
+
+                    .title-body{
+                        font-weight: 700;
+                        color: var(--text-color);
+                        margin-bottom: 4px;
+                    }
+                    .text-body{
+                        padding: 0px;
+                        margin: 0px;
+                        color: var(--text-color)!important;
+                        letter-spacing: 0.2px;
+                        line-height: 1.4285;
+                    }
+                }
+            }
+            .toolbox_panel{
+                display: flex;
+                margin-top: 30px;
+                gap: 20px;
+                button{
+                    border: none;
+                    outline: none;
+                    background: none;
+                    color: var(--text-color)!important;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 736px){
+    .Kid_WS-section{
+        width: 100%;
+        .top-main-docs{
+            padding: 24px 20px 40px;
+            .hero_header{
+                .content{
+                    display: none;
+                }
+            }
+            .hero_main{
+                h1{
+                    font-size: 30px;
+                    word-break: break-word;
+                }
+                p{
+                    font-size: 18px;
+                }
+            }
+        }
+        .main{
+            .container{
+                padding: 0 20px;
+                margin-bottom: 40px;
+                .item-main{
+                    padding-bottom: 0;
+                    .section-header{
+                        .title{
+                            h4{
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                    .section-body{
+                        .list{
+                            gap: 0;
+                            margin-bottom: 20px;
+                            a{
+                                gap: 0;
+
+                                p{
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

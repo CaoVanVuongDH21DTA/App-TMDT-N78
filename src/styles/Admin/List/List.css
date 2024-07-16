@@ -1,0 +1,42 @@
+.list_page {
+    .container {
+        background-color: white !important;
+        .row {
+            .col {
+                position: relative;
+                width: 100%;
+                h1 {
+                    color: black;
+                }
+                .table-responsive {
+                    width: 100%;
+                    border: 2px solid black;
+                    table {
+                        width: 100%;
+                        tr{
+                            th, td {
+                                text-align: center;
+                                vertical-align: middle;
+                                padding: 10px;
+                                border: 1px solid black;
+                                max-width: 150px;
+                                position: relative;
+
+                                img {
+                                    max-width: 100px;
+                                    height: auto;
+                                }
+                            }
+                            .readmore {
+                                color: blue;
+                                cursor: pointer;
+                                display: inline;
+                                margin-left: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

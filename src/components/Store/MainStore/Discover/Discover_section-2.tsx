@@ -113,55 +113,6 @@ const Discover_section2 =() =>{
 
     return(
         <div className="section-2">
-            <span className="span_7">
-                <h2>Fornite Experiences</h2>
-                <div className="FE_container">
-                    <div className="FE-content">
-                        <img src={farcry4} className="For_Exp-img"/>
-                        <div className="For_Exp-content">
-                            <h3>Find it in Fortnite</h3>
-                            <p>A new way to discover what's happening in Fortnite</p>
-                            <div className="FE-link"><a href="#">Discover</a></div>
-                        </div>
-                    </div>
-                    <div className="FE-content">
-                        <img src={farcry4} className="For_Exp-img"/>
-                        <div className="For_Exp-content">
-                            <h3>Find it in Fortnite</h3>
-                            <p>A new way to discover what's happening in Fortnite</p>
-                            <div className="FE-link"><a href="#">Discover</a></div>
-                        </div>
-                    </div>
-                    <div className="FE-content">
-                        <img src={farcry4} className="For_Exp-img"/>
-                        <div className="For_Exp-content">
-                            <h3>Find it in Fortnite</h3>
-                            <p>A new way to discover what's happening in Fortnite</p>
-                            <div className="FE-link"><a href="#">Discover</a></div>
-                        </div>
-                    </div>
-                </div>
-            </span>
-            <span className="span_8">
-                <div className="container">
-                    <div className="GN-cont">
-                        <img src={farcry4} className="img"/>
-                        <div className="Game_News-content">
-                            <h3>Find it in Fortnite</h3>
-                            <p>A new way to discover what's happening in Fortnite</p>
-                            <div className="GN-link"><a href="#">Discover</a></div>
-                        </div>
-                    </div>
-                    <div className="GN-cont">
-                        <img src={farcry4} className="img"/>
-                        <div className="Game_News-content">
-                            <h3>Find it in Fortnite</h3>
-                            <p>A new way to discover what's happening in Fortnite</p>
-                            <div className="GN-link"><a href="#">Discover</a></div>
-                        </div>
-                    </div>
-                </div>
-            </span>
             <span className="span_9">
                 <div className="list" ref={sliderRefSpan9}>
                     <div className="top-list">
@@ -249,45 +200,6 @@ const Discover_section2 =() =>{
                     ))}
                 </div>
             </span>
-            <span className="span_10">
-                <div className="span_10-container" ref={sliderRefSpan10}>
-                    <div className="span_10-content">
-                        <button className="span_10-add-game-to-wishlist"><IoAdd size={18}/></button>
-                        <img src={farcry4}/>
-                        <div className="content">
-                            <h3>Find it in Fortnite</h3>
-                            <p>A new way to discover what's happening in Fortnite</p>
-                            <div className="span_10-link"><a href="#">Discover</a></div>
-                        </div>
-                    </div>
-                    <div className="span_10-content">
-                        <img src={deadbydaylight}/>
-                        <div className="content">
-                            <h3>Find it in Fortnite</h3>
-                            <p>A new way to discover what's happening in Fortnite</p>
-                            <div className="span_10-link"><a href="#">Discover</a></div>
-                        </div>
-                    </div>
-                    <div className="span_10-content">
-                        <button className="span_10-add-game-to-wishlist"><IoAdd size={18}/></button>
-                        <img src={dyinglight2_deals}/>
-                        <div className="content">
-                            <h3>Find it in Fortnite</h3>
-                            <p>A new way to discover what's happening in Fortnite</p>
-                            <p className="price">₫249,000</p>
-                        </div>
-                    </div>
-                </div>
-                <div className="indicators">
-                    {listspan_10.map((_, index) => (
-                        <div
-                            key={index}
-                            className={`indicator ${index === activeIndexSpan10 ? 'active' : ''}`}
-                            onClick={() => handleIndicatorClickSpan10(index)}
-                        />
-                    ))}
-                </div>
-            </span>
             <span className="span_11">
                 <div className="span_11-container">
                     <div className="span_11-title-top">
@@ -297,46 +209,50 @@ const Discover_section2 =() =>{
                 </div>
                 <div className="span_11-games-list">
                     {gameData.map((game, index) => (
-                        <div className="game-card" key={index}>
-                            <div className="img-game">
-                                <button className="span_11-add-game-to-wishlist"><IoAdd size={20}/>
-                                </button>
-                                <img src={game.image} alt={game.name}/>
-                            </div>
-                            <div className="game-info">
-                                <h3>{game.name}</h3>
-                                <div className="prices">
-                                    <span className="discount">-{game.discount}%</span>
-                                    <div className="discount-sale-container">
-                                        <span
-                                            className="original-price">₫{game.originalPrice.toLocaleString()}</span>
-                                        <span className="sale-price">₫{game.price.toLocaleString()}</span>
+                        <Link to="/paypage">
+                            <div className="game-card" key={index}>
+                                <div className="img-game">
+                                    <button className="span_11-add-game-to-wishlist"><IoAdd size={20}/>
+                                    </button>
+                                    <img src={game.image} alt={game.name}/>
+                                </div>
+                                <div className="game-info">
+                                    <h3>{game.name}</h3>
+                                    <div className="prices">
+                                        <span className="discount">-{game.discount}%</span>
+                                        <div className="discount-sale-container">
+                                            <span
+                                                className="original-price">₫{game.originalPrice.toLocaleString()}</span>
+                                            <span className="sale-price">₫{game.price.toLocaleString()}</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
                 <div className="span_11-games-list-mobile">
                     {gameData.slice(0, trendingGames).map((game, index) => (
-                        <div className="game-card" key={index}>
-                            <div className="img-game">
-                                <button className="span_11-add-game-to-wishlist"><IoAdd size={20}/>
-                                </button>
-                                <img src={game.image} alt={game.name}/>
-                            </div>
-                            <div className="game-info">
-                                <h3>{game.name}</h3>
-                                <div className="prices">
-                                    <span className="discount">-{game.discount}%</span>
-                                    <div className="discount-sale-container">
+                        <Link to="/paypage">
+                            <div className="game-card" key={index}>
+                                <div className="img-game">
+                                    <button className="span_11-add-game-to-wishlist"><IoAdd size={20}/>
+                                    </button>
+                                    <img src={game.image} alt={game.name}/>
+                                </div>
+                                <div className="game-info">
+                                    <h3>{game.name}</h3>
+                                    <div className="prices">
+                                        <span className="discount">-{game.discount}%</span>
+                                        <div className="discount-sale-container">
                                         <span
                                             className="original-price">₫{game.originalPrice.toLocaleString()}</span>
-                                        <span className="sale-price">₫{game.price.toLocaleString()}</span>
+                                            <span className="sale-price">₫{game.price.toLocaleString()}</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
             </span>

@@ -15,7 +15,7 @@
         .content-news {
             margin-top: 10px;
             display: flex;
-            gap: 20px;
+            gap: 1rem;
 
 
             .game-card {
@@ -28,6 +28,7 @@
                 img {
                     width: 100%;
                     transition: filter 0.3s ease-in-out;
+                    height: 350px;
 
                     &:hover {
                         filter: brightness(1.5);
@@ -41,6 +42,9 @@
 
                 p {
                     opacity: 0.7;
+                }
+                h2{
+                    font-size: 1rem;
                 }
 
                 .link{
@@ -201,8 +205,8 @@
     }
 
     .pagination {
-        text-align: center;
         padding: 20px;
+        justify-content: center;
 
         button {
             margin: 0 5px;
@@ -236,6 +240,9 @@
                 gap: 0;
                 .game-card{
                     gap: 0;
+                    img{
+                        height: auto;
+                    }
                     h2, p{
                         margin: 0;
                         font-size: 14px;
@@ -277,12 +284,16 @@
     }
 }
 
-@media only screen and(min-width: 737px) and (max-width: 1024px) {
+@media only screen and (min-width: 737px) and (max-width: 1024px) {
     .news {
         .top_news {
             margin-bottom: 20px;
             .content-news {
                 .game-card {
+
+                    img{
+                        height: auto;
+                    }
                     h2, p {
                         font-size: 14px;
                     }
@@ -304,10 +315,11 @@
             .content{
                 p{
                     font-size: 9px;
+                    margin: 0;
                 }
                 span{
                     font-size: 14px;
-                    margin: 14px 0;
+                    margin: 8px 0;
                 }
                 a{
                     font-size: 14px;

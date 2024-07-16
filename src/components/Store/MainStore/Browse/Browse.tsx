@@ -10,6 +10,13 @@ import Filter from "../../../Responsive/Main/Browse_Filter/Filter";
 const Browse = () => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [isFilterOpen, setIsFilterOpen] = useState(false);
+    const [currentNavLink, setCurrentNavLink] = useState("All");
+
+
+    const handleNavLinkClick = (navLinkName:string) => {
+        setCurrentNavLink(navLinkName);
+        setIsDropdownOpen(false)
+    };
 
     const handleDropdownClick = () => {
         setIsDropdownOpen(!isDropdownOpen);
@@ -52,35 +59,53 @@ const Browse = () => {
                                 <div className="btn-show">
                                     <label>Show:</label>
                                     <div className="dropdown-select">
-                                        <button onClick={handleDropdownClick} className="select-btn">
+                                        <button
+                                            onClick={handleDropdownClick}
+                                            // className="select-btn"
+                                            className={`select-btn ${isDropdownOpen ? 'rotate' : ''}`}
+                                        >
                                             <div className="select">
-                                                <p className="text">All</p>
-                                                {isDropdownOpen ? (
-                                                    <FaChevronUp className="icon-logo" color="#AAAAAE"/>
-                                                ) : (
-                                                    <FaChevronDown className="icon-logo" color="#AAAAAE"/>
-                                                )}
+                                                <span className="text">{currentNavLink}</span>
+                                                <FaChevronDown className="icon-logo"/>
+
+                                                {/*{isDropdownOpen ? (*/}
+                                                {/*    <FaChevronUp className="icon-logo" color="#AAAAAE"/>*/}
+                                                {/*) : (*/}
+                                                {/*    <FaChevronDown className="icon-logo" color="#AAAAAE"/>*/}
+                                                {/*)}*/}
                                             </div>
                                         </button>
                                         <div className={`list-select ${isDropdownOpen ? 'show' : 'hide'}`}>
                                             <ul>
                                                 <li>
-                                                    <button>All</button>
+                                                    <button onClick={() => handleNavLinkClick("All")}>
+                                                        All
+                                                    </button>
                                                 </li>
                                                 <li>
-                                                    <button>New Release</button>
+                                                    <button onClick={() => handleNavLinkClick("New Release")}>
+                                                        New Release
+                                                    </button>
                                                 </li>
                                                 <li>
-                                                    <button>Coming Soon</button>
+                                                    <button onClick={() => handleNavLinkClick("Coming Soon")}>
+                                                        Coming Soon
+                                                    </button>
                                                 </li>
                                                 <li>
-                                                    <button>Alphabetical</button>
+                                                    <button onClick={() => handleNavLinkClick("Alphabetical")}>
+                                                        Alphabetical
+                                                    </button>
                                                 </li>
                                                 <li>
-                                                    <button>Price: High to Low</button>
+                                                    <button onClick={() => handleNavLinkClick("Price: High to Low")}>
+                                                        Price: High to Low
+                                                    </button>
                                                 </li>
                                                 <li>
-                                                    <button>Price: Low to High</button>
+                                                    <button onClick={() => handleNavLinkClick("Price: Low to High")}>
+                                                        Price: Low to High
+                                                    </button>
                                                 </li>
                                             </ul>
                                         </div>
