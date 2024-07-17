@@ -21,6 +21,7 @@ const Login = () => {
     //đăng nhập
     const handleSubmit = async (e: React.MouseEvent<HTMLFormElement>) => {
         e.preventDefault();
+        setLoadingAPI(true); // Bắt đầu tải API
         try {
             const userData = await Service.login(email, password)
             console.log(userData)
@@ -39,6 +40,8 @@ const Login = () => {
             setTimeout(()=>{
                 setError('');
             }, 5000);
+        }finally {
+            setLoadingAPI(false); // Hoàn tất tải API
         }
     }
 

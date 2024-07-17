@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {Suspense, useEffect, useState} from "react";
 import {Routes, Route, useLocation, NavLink, Link} from 'react-router-dom';
 import { StoreRoute } from "../Routes/StoreRoute";
 import ClipLoader from "react-spinners/ClipLoader";
@@ -9,7 +9,6 @@ import { FaAngleDown, FaTimes } from "react-icons/fa";
 import {SupportRoute} from "../Routes/SupportRoute";
 import {IoMdAdd, IoMdRemove} from "react-icons/io";
 import {FaArrowUpRightFromSquare} from "react-icons/fa6";
-import Main_Docs from "./Distribute/Documentation/Main-Docs/Main_Docs";
 import Paypage from "./Store/MainStore/PayPage/Paypage";
 
 const Main = () => {
@@ -706,7 +705,7 @@ const Main = () => {
                     )}
 
                     {pathname.startsWith("/paypage") && (
-                        <Paypage/>
+                        <Paypage />
                     )}
                 </>
             )}
