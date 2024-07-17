@@ -30,6 +30,9 @@ import horizonchase_games from "../../img/Support/horizonchase_games.jpg";
 import pcbuild_games from "../../img/Support/pcbuild_games.jpg";
 import pcbuild2_games from "../../img/Support/pcbuild2_games.jpg";
 import alanwakeR_games from "../../img/Support/alanwakeR_games.jpg";
+import enterprise_1 from "../../img/Support/enterprise_1.jpg";
+import enterprise_2 from "../../img/Support/enterprise_2.jpg";
+import enterprise_3 from "../../img/Support/enterprise_3.jpg";
 import {Link} from "react-router-dom";
 import Service from "../../service/Service";
 
@@ -268,7 +271,7 @@ const Mid = () => {
                     <h2 className="text_regional-enterprise">Enterprise</h2>
                     <div className="button_enterprise_row1">
                         <button className="unrealengine_enterprise">
-                            <img src={anhdomixi_enterprise} alt='unrealengine'
+                            <img src={enterprise_3} alt='unrealengine'
                                  className="unrealengine-image"/>
                             <span className="icon_u"><SiUnrealengine/></span>
                             <span className="text_unrealengine">UNREAL ENGINE</span>
@@ -278,7 +281,7 @@ const Mid = () => {
 
                     <div className="button_enterprise_row2">
                         <button className="marketplace_enterprise">
-                            <img src={anhdomixi_enterprise} alt='marketplace'
+                            <img src={enterprise_1} alt='marketplace'
                                  className="marketplace-image"/>
                             <span className="icon_u"><SiUnrealengine/></span>
                             <span className="text_marketplace">MARKETPLACE</span>
@@ -286,7 +289,7 @@ const Mid = () => {
                         </button>
 
                         <button className="unrealeditor_enterprise">
-                            <img src={anhdomixi_enterprise} alt='unrealeditor'
+                            <img src={enterprise_2} alt='unrealeditor'
                                  className="unrealeditor-image"/>
                             <span className="text_unrealeditor">UNREAL EDITOR FOR FORTNITE</span>
                             <span className="icon_muiten" style={{fontSize: '25px'}}><GoArrowUpRight/></span>

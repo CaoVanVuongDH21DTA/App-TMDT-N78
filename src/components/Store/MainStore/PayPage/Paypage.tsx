@@ -14,7 +14,7 @@ const Paypage: React.FC = () => {
 
     return (
         <main className="Paypagemain" id="mainPay">
-            <div className="content">
+            <div className="content-paypage">
                 <div className="overview-section">
                 <h1 className="title_pay">F1® 24</h1>
                     <div className="top-bar">

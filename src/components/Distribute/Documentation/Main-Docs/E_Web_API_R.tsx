@@ -1,7 +1,5 @@
 import React from "react";
-
 import '../../../../styles/Distribute/E_Web_API_R.css'
-
 import {MdNavigateNext, MdPrint} from "react-icons/md";
 import {CiSearch} from "react-icons/ci";
 import {IoShareSocial} from "react-icons/io5";

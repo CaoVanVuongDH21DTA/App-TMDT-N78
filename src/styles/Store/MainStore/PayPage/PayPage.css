@@ -9,7 +9,7 @@
 
 }
 
-.content {
+.content-paypage {
     background: transparent;
     display: flex;
     flex-direction: column;
@@ -443,7 +443,7 @@
         padding: 0;
     }
 
-    .content {
+    .content-paypage {
         align-items: flex-start;
         width: 80%;
     }

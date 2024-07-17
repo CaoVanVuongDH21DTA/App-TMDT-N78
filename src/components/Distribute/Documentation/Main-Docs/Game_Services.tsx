@@ -1,7 +1,5 @@
 import React from "react";
-
 import '../../../../styles/Distribute/Game_Services.css'
-
 import {MdNavigateNext, MdPrint} from "react-icons/md";
 import {CiSearch} from "react-icons/ci";
 import {GoArrowUpRight} from "react-icons/go";

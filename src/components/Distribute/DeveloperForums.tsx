@@ -9,10 +9,6 @@ import { MdOutlineSkipPrevious } from "react-icons/md";
 import {FaChevronDown} from "react-icons/fa";
 import { IoMenu } from "react-icons/io5";
 import { FaKeyboard } from "react-icons/fa6";
-import { FaTag } from "react-icons/fa";
-import { CgLink } from "react-icons/cg";
-import { FaRegQuestionCircle } from "react-icons/fa";
-import { FiAlertCircle } from "react-icons/fi";
 
 function DeveloperForums(){
     const [showGeneral, setShowGeneral] = useState(false);

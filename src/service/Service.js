@@ -3,7 +3,6 @@ import axios from "axios";
 class Service {
     static BASE_URL = "http://localhost:8080"
 
-
     //Users
     static async login(email, password){
         try{
@@ -102,7 +101,6 @@ class Service {
             throw new Error('Error deleting game');
         }
     }
-
 
     //AUTHENTICATION CHECKER
     static logout(){
